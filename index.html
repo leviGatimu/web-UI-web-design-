@@ -1,68 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment form</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Form</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-blue-50 min-h-screen">
-   <div class="container mx-auto p-5 grid-col-1 md:grid-cols-2 gap-10 ">
-    <div class="mt-10 mb-5">
-    <h1 class="font-bold text-2xl">Payment information </h1>
-    </div>
-    <div class="border p-5 rounded-lg py-4 bg-white">
-        <div class="mt-5">
-        <form action="">
-            <div class="mt-5">
-            <label for="nameOnCard" class="">Name on card</label><br>
-            <input type="text" id="nameOnCard" class="border p-2 rounded w-full" placeholder="John Doe"><br><br>
-            </div>
-            <div class="mt-2">
-                <label for="cardNumber" class="">Card Number</label><br>
-            <input type="text" id="cardNumber" class="border p-2 rounded w-full" placeholder="1234 5678 9012 3456"><br><br>
-            </div>
-            <div class="flex gap-5 mt-2">
-                <div>
-                    <label for="expiryDate" class="">Expiry Date</label><br>
-                    <input type="text" id="expiryDate" class="border p-2 rounded w-full" placeholder="Month"><br><br>
-                </div>
-                <div>
-                    <label for="cvv" class=""></label><br>
-                    <input type="text" id="cvv" class="border p-2 rounded w-full" placeholder="Year"><br><br>
-                </div>
-                <div>
-                    <label for="cvv" class="text-muted">CVC</label><br>
-                    <input type="text" id="cvv" class="border p-2 rounded w-full" placeholder="123"><br><br>
-                </div>
-            </div>
-            <div class="mt-4">
-                <p class="font-bold ">950 USD</p>
-            </div>
-            <div class="mt-5">
-                <button class="bg-blue-500 text-white px-4 py-2 rounded w-full">Confirm payment</button>
-            </div>
-        </form>
-    </div>
-   </div>
-    <h1 class="font-bold text-2xl">Order Summary</h1>
-   <div class="container mx-auto p-5 grid-col-1 md:grid-cols-2 gap-10 "> 
-    <div class="border p-5 rounded-lg py-4 bg-white">
 
-        <div class="mt-5">
-       <div class="border bg-gray-500 p-5 rounded-lg py-5 grid-cols-1 w-5 "></div>
-       <p>Title 1</p>
-       <small class="">lorem impsu liwe</small>
-       <p class="font-bold">500 USD</p>
-       </div>
-         <div class="mt-5">
-         <div class="border bg-gray-500 p-5 rounded-lg py-5 grid-cols-1 w-5 "></div>
-         <p>Title 2</p>
-            <small class="">lorem impsu liwe</small>
-            <p class="font-bold">450 USD</p>
-       </div>
+<body class="bg-blue-50 min-h-screen flex items-center justify-center">
+
+<div class="container mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div>
+        <h1 class="font-bold text-2xl mb-6">Payment Information</h1>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+
+            <form>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium">Name on Card</label>
+                    <input type="text" placeholder="John Doe"
+                    class="border p-2 rounded w-full mt-1 focus:ring-2 focus:ring-blue-400 outline-none">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium">Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456"
+                    class="border p-2 rounded w-full mt-1 focus:ring-2 focus:ring-blue-400 outline-none">
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 mb-4">
+
+                    <div>
+                        <label class="block text-sm font-medium">Month</label>
+                        <input type="text" placeholder="Month"
+                        class="border p-2 rounded w-full mt-1">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">Year</label>
+                        <input type="text" placeholder="Year"
+                        class="border p-2 rounded w-full mt-1">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium">CVC</label>
+                        <input type="text" placeholder="123"
+                        class="border p-2 rounded w-full mt-1">
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-6 mb-4">
+                    <span class="text-lg font-bold"></span>
+                    <span class="font-bold ">$950 USD</span>
+                </div>
+
+                <button
+                class="bg-blue-600 hover:bg-blue-700 text-white w-full py-3 rounded-lg font-medium transition">
+                Confirm Payment
+                </button>
+
+            </form>
+
+        </div>
     </div>
+
+    <div>
+
+        <h1 class="font-bold text-2xl mb-6">Order Summary</h1>
+
+        <div class="bg-white p-6 rounded-xl shadow space-y-6">
+
+            <div class="flex gap-4 items-center">
+                <div class="w-16 h-16 bg-gray-300 rounded"></div>
+                <div class="flex-1">
+                    <p class="font-bold">Title 1</p>
+                    <small class="text-gray-500">Lorem ipsum description</small>
+                </div>
+                <p class="font-bold">x</p>
+            </div>
+
+            <div class="flex gap-4 items-center">
+                <div class="w-16 h-16 bg-gray-300 rounded"></div>
+                <div class="flex-1">
+                    <p class="font-bold">Title 2</p>
+                    <small class="text-gray-500">Lorem ipsum description</small>
+                </div>
+                <p class="font-bold">x</p>
+            </div>
+
+            <div class="flex gap-4 items-center">
+                <div class="w-16 h-16 bg-gray-300 rounded"></div>
+                <div class="flex-1">
+                    <p class="font-bold">Title 3</p>
+                    <small class="text-gray-500">Lorem ipsum description</small>
+                </div>
+                <p class="font-bold">x</p>
+            </div>
+
+        </div>
+
     </div>
-    
+
+</div>
+
 </body>
 </html>
